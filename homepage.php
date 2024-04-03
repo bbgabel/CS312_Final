@@ -16,9 +16,9 @@
             <a href="./about.php">About us</a>
             <a href="./colorgenerator.php">Color Coordinate Generator</a>
         </nav>
-    <div>
+    </div>
     <div id="header">
-    <h1>Welcome to our home page!</h1>
+    <h1>Team Temp</h1>
     </div>
     <main>
         <div id="introparagraph">
