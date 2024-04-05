@@ -16,7 +16,7 @@
         }
 
         th, td {
-            padding: 8px;
+            padding: 6px;
             text-align: center;
         }
     </style>
