@@ -3,15 +3,13 @@
 
 <head>
     <title>Color Coordinate Generation</title>
-    <meta name="description" content="color cooridnate generator">
+    <meta name="description" content="color coordinate generator">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
 
     <script>
         function handleColorChange(color) {
-
             var selectedColor = color.value;
-
             var selectedColors = [];
             var dropdowns = document.querySelectorAll("select");
             for (let i = 0; i < dropdowns.length; i++) {
@@ -19,16 +17,14 @@
                     selectedColors.push(dropdowns[i].value);
                 }
             }
-
             if (selectedColors.includes(selectedColor)) {
                 alert("Color already chosen.");
                 color.selectedIndex = 0;
             }
         }
     </script>
-
-
 </head>
+
 <body>
     <div id="navbar">
         <nav>
@@ -69,6 +65,7 @@
 
             if (!$error) {
                 echo "<h2>Color Selector Table</h2>";
+                echo "<form action='printview.php' method='post'>";
                 echo "<table>";
                 echo "<tr><th>Color</th><th>Dropdown</th></tr>";
                 
@@ -76,11 +73,11 @@
 
                 shuffle($availableColors);
 
-                for ($i = 0; $i < $colors; $i++) {
+                for ($i = 1; $i <= $colors; $i++) {
                     $dropdownId = "colorDropdown_$i";
                     $color = array_pop($availableColors);
-                    echo "<tr><td>Color " . ($i + 1) . "</td><td>";
-                    echo "<select id='$dropdownId' onchange='handleColorChange(this)'>";
+                    echo "<tr><td>Color $i</td><td>";
+                    echo "<select name='$dropdownId' onchange='handleColorChange(this)'>";
                     echo "<option value='$color'>$color</option>";
                     foreach ($availableColors as $remainingColor) {
                         echo "<option value='$remainingColor'>$remainingColor</option>";
@@ -88,8 +85,11 @@
                     echo "</select>";
                     echo "</td></tr>";
                 }
- 
                 echo "</table>";
+                echo "<input type='hidden' name='rowscols' value='$rowscols'>";
+                echo "<input type='hidden' name='colors' value='$colors'>";
+                echo "<input type='submit' value='Printable View'>";
+                echo "</form>";
     
                 echo "<h2>Color Table</h2>";
                 echo "<table>";
