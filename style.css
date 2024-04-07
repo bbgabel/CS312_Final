@@ -51,11 +51,21 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto; 
-    text-align: center; 
+    text-align: center;
+
 }
 
 #introparagraph {
+    margin-top: 80px;
     margin-bottom: 20px;
+}
+
+#background {
+    background-color: #14290888;
+    width:72%;
+    height: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #team-members {
@@ -80,3 +90,4 @@ main {
 .member img {
     width: 100%;
 }
+
