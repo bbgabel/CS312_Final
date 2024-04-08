@@ -32,14 +32,17 @@ header("Pragma: no-cache");
                 <p>I'm Jeremiah, I'm a senior here at Colorado State University. I work at the United States Department of Agrictulture (USDA) as Programmer, and I aspire to be a full-stack software developer.</p>
                 <img src="./img/JG.jpeg" alt="Jeremiah">
             </div>
-<<<<<<< Updated upstream
-=======
-            <div class="member">
+            <div class = "member">
+                <h2>Nathan Bennick</h2>
+                <p>I'm Nate, a senior at Colorado State University. I am currently employeed with Amergint Technologies, an areospace company based in Colorado Springs, as a software engineering intern and a UTA for CSU.</p>
+                <img src="./img/nate.jpeg" alt="Nate">
+            </div>
+          <div class="member">
                 <h2>Sean Fyola</h2>
                 <p>I'm Sean, and I'm a student here at CSU. I have recently taken the jump into freelancing, where I primarily do PLC control and SCADA development. </p>
                 <img src="./img/SF.jpg" alt="Sean">
             </div>
->>>>>>> Stashed changes
+          </main>
         </div>
     </main>
 </div>
