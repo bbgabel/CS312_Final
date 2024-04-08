@@ -1,3 +1,6 @@
+
 <?php
-include 'homepage.php';
+header("Location: ./homepage.php");
+die();
 ?>
+

@@ -36,6 +36,7 @@
     <div id="header">
         <h1>Color Coordinate Generation</h1>
     </div>
+    <div id="background">
     <main>
         <form action="colorgenerator.php" method="post">
             <label for="rowscols">Number of Rows & Columns (1-26):</label>
@@ -114,6 +115,7 @@
         }
         ?>
     </main>
+    </div>
 </body>
 
 </html>

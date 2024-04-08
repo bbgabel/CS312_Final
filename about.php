@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
+<?php
 
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
 <head>
     <title>About Us - Team Temp</title>
     <meta name="description" content="About the members of Team Temp">
@@ -19,6 +24,7 @@
     <div id="header">
         <h1>About Us</h1>
     </div>
+    <div id="background">
     <main>
         <div id="team-members">
             <div class="member">
@@ -31,8 +37,15 @@
                 <p>I'm Nate, a senior at Colorado State University. I am currently employeed with Amergint Technologies, an areospace company based in Colorado Springs, as a software engineering intern and a UTA for CSU.</p>
                 <img src="./img/nate.jpeg" alt="Nate">
             </div>
+          <div class="member">
+                <h2>Sean Fyola</h2>
+                <p>I'm Sean, and I'm a student here at CSU. I have recently taken the jump into freelancing, where I primarily do PLC control and SCADA development. </p>
+                <img src="./img/SF.jpg" alt="Sean">
+            </div>
+          </main>
         </div>
     </main>
+</div>
 </body>
 
 </html>

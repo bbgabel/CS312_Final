@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html>
+<?php
 
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
 <head>
     <title>Printable View</title>
     <meta name="description" content="Print View of Color Generator">
     <meta charset="UTF-8">
     <style>
+        @media print {
+            @page { size: letter portrait; max-height:25%; max-width:100%}
+
+            .printable {
+                width:50%%;
+                height:10%%;       
+            }
+        }
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: 80%;
+            table-layout: fixed;
         }
+
 
         table, th, td {
             border: 1px solid black;
         }
 
         th, td {
-            padding: 6px;
+            padding: 1px;
             text-align: center;
         }
+
+
+
+    
+        
+
     </style>
 </head>
 
-<body>
-    <h1>Printable View</h1>
-
+<body class="printable">
     <h2>Color Selector Table</h2>
     <table>
         <tr>
