@@ -63,7 +63,7 @@ main {
 #background {
     background-color: #14290888;
     width:72%;
-    height: 1200px;
+    min-height: 100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -91,3 +91,21 @@ main {
     width: 100%;
 }
 
+.color-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    background-color: white;
+    color: black;
+}
+
+.color-table th,
+.color-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.color-cell {
+    cursor: pointer;
+}

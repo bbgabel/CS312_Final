@@ -15,8 +15,8 @@ header("Pragma: no-cache");
             @page { size: letter portrait; max-height:25%; max-width:100%}
 
             .printable {
-                width:50%%;
-                height:10%%;       
+                width:50%;
+                height:10%;       
             }
         }
         table {
