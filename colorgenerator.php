@@ -86,6 +86,7 @@
             <a href="./homepage.php">Homepage</a>
             <a href="./about.php">About us</a>
             <a href="#">Color Coordinate Generator</a>
+            <a href="./manageColors.php">Manage Colors</a>
         </nav>
     </div>
     <div id="header">
@@ -128,24 +129,51 @@
                     echo "<table class='color-table'>";
                     echo "<tr><th>Color</th><th>Dropdown</th><th>Selected</th><th>Coordinate</th></tr>";
 
-                    $availableColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'grey', 'brown', 'black', 'teal'];
-                    shuffle($availableColors);
+                    $servername = "faure.cs.colostate.edu:3306";
+                    $username = "bbgabel";
+                    $password = "835839390";
+                    $dbname = "bbgabel";
 
-                    for ($i = 1; $i <= $colors; $i++) {
-                        $dropdownId = "colorDropdown_$i";
-                        $radioId = "colorDropdown_$i" . "_radio";
-                        $color = array_pop($availableColors);
-                        echo "<tr><td>Color $i</td><td>";
-                        echo "<select id='$dropdownId' name='$dropdownId' onchange='handleColorChange(this)'>";
-                        echo "<option value='$color'>$color</option>";
-                        foreach ($availableColors as $remainingColor) {
-                            echo "<option value='$remainingColor'>$remainingColor</option>";
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM colors";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        $availableColors = [];
+                        while ($row = $result->fetch_assoc()) {
+                            $color = [
+                                "name" => $row["Name"],
+                                "hexValue" => $row["HexValue"]
+                            ];
+                            array_push($availableColors, $color);
                         }
-                        echo "</select>";
-                        echo "</td>";
-                        echo "<td><input type='radio' id='$radioId' name='selectedColor' value='$color' " . ($i == 1 ? 'checked' : '') . "></td>";
-                        echo "<td data-color-list='$color'></td>";
-                        echo "</tr>";
+                        shuffle($availableColors);
+
+
+                        $conn->close();
+
+                        for ($i = 1; $i <= $colors; $i++) {
+                            $dropdownId = "colorDropdown_$i";
+                            $radioId = "colorDropdown_$i" . "_radio";
+                            $color = array_pop($availableColors);
+                            echo "<tr><td>Color $i</td><td>";
+                            echo "<select id='$dropdownId' name='$dropdownId' onchange='handleColorChange(this)'>";
+                            echo "<option value='{$color["hexValue"]}'>{$color["name"]}</option>";
+                            foreach ($availableColors as $remainingColor) {
+                                echo "<option value='{$remainingColor["hexValue"]}'>{$remainingColor["name"]}</option>";
+                            }
+                            echo "</select>";
+                            echo "</td>";
+                            echo "<td><input type='radio' id='$radioId' name='selectedColor' value='{$color["hexValue"]}' " . ($i == 1 ? 'checked' : '') . "></td>";
+                            echo "<td data-color-list='{$color["hexValue"]}'></td>";
+                            echo "</tr>";
+                        }                        
+                    } else {
+                        echo "No results";
                     }
                     echo "</table>";
                     echo "<input type='hidden' name='rowscols' value='$rowscols'>";
