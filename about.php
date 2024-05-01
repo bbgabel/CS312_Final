@@ -7,7 +7,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 ?>
 <head>
-    <title>About Us - Team Temp</title>
+    <title>About Us - Team 10</title>
     <meta name="description" content="About the members of Team Temp">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -19,6 +19,7 @@ header("Pragma: no-cache");
             <a href="./homepage.php">Homepage</a>
             <a href="#">About us</a>
             <a href="./colorgenerator.php">Color Coordinate Generator</a>
+            <a href="./manageColors.php">Manage Colors</a>
         </nav>
     </div>
     <div id="header">

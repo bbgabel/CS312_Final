@@ -20,6 +20,7 @@ header("Pragma: no-cache");
             <a href="#">Homepage</a>
             <a href="./about.php">About us</a>
             <a href="./colorgenerator.php">Color Coordinate Generator</a>
+            <a href="./manageColors.php">Manage Colors</a>
         </nav>
     </div>
     <div id="header">
