@@ -33,9 +33,9 @@ header("Pragma: no-cache");
                 <img src="./img/JG.jpeg" alt="Jeremiah">
             </div>
             <div class = "member">
-                <h2>Nathan Bennick</h2>
-                <p>I'm Nate, a senior at Colorado State University. I am currently employeed with Amergint Technologies, an areospace company based in Colorado Springs, as a software engineering intern and a UTA for CSU.</p>
-                <img src="./img/nate.jpeg" alt="Nate">
+                <h2>Javier Schafer</h2>
+                <p>I'm Javier and I'm a soon to be alumni of CSU this May. I work part-time as an IT professional and hope to pursue a career in tech. Otherwise, you can find me making cars fast.</p>
+                <img src="./img/javier.jpeg" alt="Javier">
             </div>
           <div class="member">
                 <h2>Sean Fyola</h2>
