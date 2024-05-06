@@ -117,3 +117,64 @@ main {
 .color-cell {
     cursor: pointer;
 }
+
+#tableHolder {
+    padding: 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#colorManagementTable{
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-collapse:collapse;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#colorManagementTable th {
+    width: 25%;
+}
+
+#AddFormDiv {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#addForm {
+    display: flexbox;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#EditFormDiv {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#editForm {
+    display: flexbox;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#errorHandler {
+    width: 100%;
+    padding-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#StatusMessage {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+}
